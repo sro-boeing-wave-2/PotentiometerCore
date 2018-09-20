@@ -29,6 +29,7 @@ namespace Potentiometer.Core.QuestionTypes
         public string QuestionType { get; set; }
         public string[] ConceptTags { get; set; }
         public string Taxonomy { get; set; }
+        public int DifficultyLevel { get; set; }
 
         public string QuestionText { get; set; }
         public string Raw { get; set; }
