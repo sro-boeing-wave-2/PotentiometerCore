@@ -21,6 +21,11 @@ namespace Potentiometer.Core.QuestionTypes
     public class MMCQ : IQuestion
     {
 
+        public MMCQ()
+        {
+            this.QuestionId = ObjectId.GenerateNewId().ToString();
+        }
+        
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string QuestionId { get; set; }
@@ -30,13 +35,14 @@ namespace Potentiometer.Core.QuestionTypes
         public string QuestionType { get; set; }
         public string[] ConceptTags { get; set; }
         public string Taxonomy { get; set; }
+        public int DifficultyLevel { get; set; }
 
         public string QuestionText { get; set; }
         public string Raw { get; set; }
         public List<MMCQOption> Options { get; set; }
         public List<MMCQOption> CorrectOptions { get; set; }
         public List<MMCQOption> Response { get; set; }
-
+        
         public bool Evaluate()
         {
             return Response.ToString() == CorrectOptions.ToString();
