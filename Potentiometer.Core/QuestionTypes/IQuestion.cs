@@ -19,5 +19,6 @@ namespace Potentiometer.Core.QuestionTypes
         string QuestionType { get; set; }
         string[] ConceptTags { get; set; }
         string Taxonomy { get; set; } //BloomsTaxanomy level
+        bool Evaluate();
     }
 }
