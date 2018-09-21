@@ -27,6 +27,7 @@ namespace Potentiometer.Core.QuestionTypes
         }
         
         [BsonId]
+        [BsonElement("_id")]
         [BsonRepresentation(BsonType.ObjectId)]
         public string QuestionId { get; set; }
 
@@ -34,6 +35,7 @@ namespace Potentiometer.Core.QuestionTypes
         public string Domain { get; set; }
         public string QuestionType { get; set; }
         public string[] ConceptTags { get; set; }
+
         public string Taxonomy { get; set; }
         public int DifficultyLevel { get; set; }
 

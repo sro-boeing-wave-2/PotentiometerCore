@@ -11,6 +11,7 @@ namespace Potentiometer.Core.QuestionTypes
     public interface IQuestion
     {
         [BsonId]
+        [BsonElement("_id")]
         [BsonRepresentation(BsonType.ObjectId)]
         string QuestionId { get; set; }
 

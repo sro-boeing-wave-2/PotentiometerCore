@@ -26,6 +26,7 @@ namespace Potentiometer.Core.QuestionTypes
         }
 
         [BsonId]
+        [BsonElement("_id")]
         [BsonRepresentation(BsonType.ObjectId)]
         public string QuestionId { get; set; }
 
