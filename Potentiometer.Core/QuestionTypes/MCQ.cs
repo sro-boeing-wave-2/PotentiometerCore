@@ -43,7 +43,6 @@ namespace Potentiometer.Core.QuestionTypes
         public MCQOption CorrectAnswer { get; set; }
         public MCQOption Response { get; set; }
         
-
         public override string ToString()
         {
             return JsonConvert.SerializeObject(this);
