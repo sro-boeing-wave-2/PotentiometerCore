@@ -50,7 +50,7 @@ namespace Potentiometer.Core.QuestionTypes
             bool b = false;
             for(int i = 0 ; i < CorrectOptions.Count; i++)
             {
-                if(CorrectOptions[i].Raw == Response[i].Raw)
+                if(CorrectOptions[i].Raw.ToString() == Response[i].Raw.ToString())
                 {
                     b = true;
                 }
