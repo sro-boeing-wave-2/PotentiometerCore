@@ -50,7 +50,7 @@ namespace Potentiometer.Core.QuestionTypes
 
         public bool Evaluate()
         {
-            return Response.ToString() == CorrectAnswer.ToString();
+            return Response.Raw == CorrectAnswer.Raw;
         }
     }
 }

@@ -47,7 +47,19 @@ namespace Potentiometer.Core.QuestionTypes
         
         public bool Evaluate()
         {
-            return Response.ToString() == CorrectOptions.ToString();
+            bool b = false;
+            for(int i = 0 ; i < CorrectOptions.Count; i++)
+            {
+                if(CorrectOptions[i].Raw == Response[i].Raw)
+                {
+                    b = true;
+                }
+                else
+                {
+                    b = false;
+                }
+            }
+            return b;
         }
 
         public override string ToString()
